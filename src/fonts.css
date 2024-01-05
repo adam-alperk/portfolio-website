@@ -1,0 +1,31 @@
+/* Import all fonts */
+
+@font-face {
+  font-family: "CocogooseProRegular";
+  src: url("/Fonts/Cocogoose/Cocogoose-Pro-Regular-trial.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/Fonts/JetBrains Mono/static/JetBrainsMono-Medium.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yazo";
+  src: url("/Fonts/Yazo/Yazo.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/Fonts/Yazo/Poppins-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

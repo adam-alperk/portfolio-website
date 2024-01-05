@@ -1,0 +1,179 @@
+@import "./fonts.css";
+
+/* ############################################################################################ */
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes GrowIn {
+  0% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* ############################################################################################ */
+
+h1 {
+  position: absolute;
+
+  font-family: "CocogooseProRegular", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #ff3651;
+  scale: 0.9;
+
+  opacity: 0;
+  visibility: hidden;
+  animation: FadeIn 1.5s ease-in-out 0.5s forwards,
+    GrowIn 1.5s ease-in-out 0.5s forwards;
+}
+
+h3 {
+  padding: 13px;
+
+  font-family: "JetBrainsMono", monospace;
+  font-size: 1rem;
+  color: #c2c2c2;
+  animation: FadeIn 1.5s ease-in 0.7s 1 forwards;
+}
+
+a {
+  font-family: "JetBrainsMono", monospace;
+  font-size: 1rem;
+  font-weight: 500 !important;
+  color: #c2c2c2;
+  text-decoration: none;
+
+  visibility: hidden;
+  transition: color 0.2s;
+  transition-timing-function: ease-in;
+  animation: FadeIn 1.5s ease-in 1.5s forwards;
+}
+
+/* ############################################################################################ */
+
+.BG {
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  overscroll-behavior: none;
+  /* animation: FadeIn 2s ease-in 1s 1 normal; */
+}
+
+.Image {
+  position: fixed;
+  display: flex;
+  background: url("/BG.png") center/cover no-repeat;
+  /* filter: blur(10px) !important; */
+  height: 100vh;
+  width: 100vw;
+
+  opacity: 1;
+  visibility: hidden;
+  animation: FadeIn 2s ease-in 0.5s 1 forwards;
+}
+
+.Page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+.Rive {
+  display: flex;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  filter: opacity(50%);
+  overflow: hidden !important;
+
+  opacity: 1;
+  visibility: hidden;
+  animation: FadeIn 1.5s ease-in 0.5s 1 forwards;
+}
+
+.SecondHeadings {
+  top: 20px;
+}
+
+.SubHeadings {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  padding-top: 110px;
+}
+
+.About {
+  display: flex;
+  position: absolute;
+  padding-top: 90vh;
+}
+
+.Buttons {
+  display: flex;
+  position: absolute;
+}
+
+.Button1 {
+  /* position: absolute; */
+  transform: translate(-50px, 50px);
+  transition: transform 0.15s, color 0.15s !important;
+  transition-timing-function: ease-in-out;
+}
+
+.Button2 {
+  /* position: absolute; */
+  transform: translate(50px, 50px);
+  transition: transform 0.15s, color 0.15s !important;
+  transition-timing-function: ease-in-out;
+}
+
+.Button3 {
+  padding: 0px;
+  transform: translate(0px, 0px);
+  transition: transform 0.15s, color 0.15s !important;
+  transition-timing-function: ease-in-out;
+}
+
+/* ########################################## HOVER ########################################## */
+
+a:hover {
+  color: #e3e3e3;
+}
+.Button1:hover {
+  transform: translate(-50px, 48px);
+}
+.Button2:hover {
+  transform: translate(50px, 48px);
+}
+.Button3:hover {
+  transform: translateY(-2px);
+}
+
+/* ############################################################################################ */
+
+@media (max-width: 1079px) {
+  .Rive {
+    height: 80%;
+    width: 80%;
+  }
+}

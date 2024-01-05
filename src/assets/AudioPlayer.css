@@ -1,0 +1,115 @@
+@import "../fonts.css";
+
+:root {
+  --wh: 200px;
+}
+
+.audio-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  background-color: #333333aa;
+  backdrop-filter: blur(20px) !important;
+  width: 900px;
+  height: var(--wh);
+  max-width: 88vw;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 5px 20px black;
+}
+
+.player-wrapper {
+  display: flex;
+  width: 700px;
+  max-width: 90vw;
+  margin: 30px;
+  background: transparent;
+  transform: translateY(50px);
+  justify-content: center;
+}
+
+audio {
+  background: transparent;
+  border-radius: 15px;
+}
+
+.artwork {
+  width: var(--wh);
+  height: var(--wh);
+  margin-right: 16px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px black;
+}
+
+.songName {
+  display: flex;
+  position: absolute;
+  transform: translate(100px, -40px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.controls {
+  flex-grow: 1;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.time-display {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* ########################################## MEDIA ########################################## */
+
+@media (max-width: 810px) {
+  .audio-player {
+    flex-direction: column;
+    max-width: 70vw;
+  }
+  .artwork {
+    position: absolute;
+    margin: 0px;
+    scale: 0.7;
+    transform: translateY(-40px);
+  }
+  .player-wrapper {
+    align-items: center;
+    max-width: 70vw;
+  }
+  audio {
+    transform: translateY(30px) !important;
+    border-radius: 0px;
+    background: transparent;
+  }
+}
